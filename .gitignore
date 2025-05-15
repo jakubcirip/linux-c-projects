@@ -1,0 +1,22 @@
+# Object files
+*.o
+
+# Build output
+*.out
+*.ko
+
+# Dependency files
+*.d
+
+# Editor files
+*.swp
+*~
+
+# Backup files
+*.bak
+
+# Logs
+*.log
+
+# Compiled binaries
+a.out
