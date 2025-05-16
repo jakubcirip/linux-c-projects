@@ -39,3 +39,27 @@ if(chdir(path) != 0){
 
 pid_t pid = fork(); 
 pid_t - type of a process id (unsigned)
+
+fork() - create new process (child)
+pid == 0 - for child (run execvp)
+pid > 0 - for parent 
+execvp() - replace child process by new process (for example ls)
+wait() - parent process not running while until child stop
+
+### In function parse_input(char *input, char **args):
+
+Splits the input string (ls -l /home) into:
+args[0] = "ls"
+args[1] = "-l"
+args[2] = "/home"
+args[3] = NULL
+This array is then used as an argument to execvp(), which expects it in the format argv[].
+
+## Summary
+
+The user enters a command (e.g. ls -l).
+The shell uses fork() to create a child.
+In the child, parse_input() is called to split the command.
+Execvp() is run with the command and arguments.
+If execvp() fails, an error is printed and the child terminates.
+The parent waits() for the child to terminate.
