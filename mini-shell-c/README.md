@@ -16,8 +16,9 @@ make
 ```
 
 ## Run
-
+```bash
 ./mini-shell
+```
 
 ## Files
 
