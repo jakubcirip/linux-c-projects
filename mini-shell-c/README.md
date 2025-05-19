@@ -11,8 +11,9 @@ A simple Unix-like shell written in C, designed as a learning project to underst
 
 ## Build
 
-'''bash
+```bash
 make
+```
 
 ## Run
 
