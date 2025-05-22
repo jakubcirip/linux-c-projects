@@ -26,7 +26,7 @@ pthread_t is the type used to indetify a thread in POSIX systems.
 
 It is an **opaque data type** - meaning we don't care what is inside. We just use it to reference a thread.
 
-# Internally:
+## Internally:
 - It may be implemented as an integer, a stuct, or even a pointer.
 - We can't assume it's an unsigned char or int.
 - We only used it with pthread function like pthread_create, pthread_join, etc.
